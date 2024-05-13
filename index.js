@@ -19,8 +19,10 @@ client.on('messageCreate', (message) =>{
     if (message.author.bot)return;
     if (message.content.startsWith(IGNORE_PREFIX)) return;
     if (!CHANNELS.includes(message.channelId) && !message.mentions.users.has(client.user.id)) return;
-
-
+    else 
+    return console.log( message.content);
+    
+ 
 })
 client.login(process.env.TOKEN); 
 
